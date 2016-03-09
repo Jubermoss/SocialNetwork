@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Twitter">
+  <DataContextMoniker Name="/TwitterDataContext" />
+  <nestedChildShapes>
+    <classShape Id="dee5c9fd-5682-473d-9e6c-ee2bfa137c02" absoluteBounds="2.25, 3, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/TwitterDataContext/Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40b5fb4c-e0e6-4c9a-930b-a5e04542ff74" absoluteBounds="2.265, 3.46, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6007ea4d-5cb3-410f-9d42-5572212b7a05" absoluteBounds="2.25, 0.875, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/TwitterDataContext/Album" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ba7cab1-1108-403c-8248-c51ee6751927" absoluteBounds="2.265, 1.335, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 3); (3.25 : 2.29984781901042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TwitterDataContext/Usuario/Usuario_Album" />
+      <nodes>
+        <classShapeMoniker Id="dee5c9fd-5682-473d-9e6c-ee2bfa137c02" />
+        <classShapeMoniker Id="6007ea4d-5cb3-410f-9d42-5572212b7a05" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1204fbec-5894-46e7-b82f-dd335e1194ff" absoluteBounds="5.5, 1.25, 2, 1.26050048828125">
+      <DataClassMoniker Name="/TwitterDataContext/Imagen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7cc659e-ade1-46c9-9c31-1e59781972eb" absoluteBounds="5.515, 1.71, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.25 : 1.77492390950521); (5.5 : 1.77492390950521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TwitterDataContext/Album/Album_Imagen" />
+      <nodes>
+        <classShapeMoniker Id="6007ea4d-5cb3-410f-9d42-5572212b7a05" />
+        <classShapeMoniker Id="1204fbec-5894-46e7-b82f-dd335e1194ff" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5b021d85-d235-4f8d-ba0c-ba0b38691a51" absoluteBounds="2.5, 5.625, 2, 1.75354248046875">
+      <DataClassMoniker Name="/TwitterDataContext/Amigo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75338268-9c31-4e1a-a6dc-4f27146d57c7" absoluteBounds="2.515, 6.085, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 4.58919514973958); (3.375 : 5.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TwitterDataContext/Usuario/Usuario_Amigo" />
+      <nodes>
+        <classShapeMoniker Id="dee5c9fd-5682-473d-9e6c-ee2bfa137c02" />
+        <classShapeMoniker Id="5b021d85-d235-4f8d-ba0c-ba0b38691a51" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.875 : 4.58919514973958); (3.875 : 5.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TwitterDataContext/Usuario/Usuario_Amigo1" />
+      <nodes>
+        <classShapeMoniker Id="dee5c9fd-5682-473d-9e6c-ee2bfa137c02" />
+        <classShapeMoniker Id="5b021d85-d235-4f8d-ba0c-ba0b38691a51" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="22f2b087-0669-46ba-9ce1-0a96ea706782" absoluteBounds="6.5, 2.75, 2, 1.75354248046875">
+      <DataClassMoniker Name="/TwitterDataContext/Mensaje" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3786a8b2-eb58-4157-a70b-6a888d830c5b" absoluteBounds="6.5150000000000006, 3.21, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.25 : 3.75177124023438); (6.5 : 3.75177124023438)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TwitterDataContext/Usuario/Usuario_Mensaje" />
+      <nodes>
+        <classShapeMoniker Id="dee5c9fd-5682-473d-9e6c-ee2bfa137c02" />
+        <classShapeMoniker Id="22f2b087-0669-46ba-9ce1-0a96ea706782" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.25 : 3.31338562011719); (6.5 : 3.31338562011719)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TwitterDataContext/Usuario/Usuario_Mensaje1" />
+      <nodes>
+        <classShapeMoniker Id="dee5c9fd-5682-473d-9e6c-ee2bfa137c02" />
+        <classShapeMoniker Id="22f2b087-0669-46ba-9ce1-0a96ea706782" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

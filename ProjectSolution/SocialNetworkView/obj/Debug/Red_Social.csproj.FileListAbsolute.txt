@@ -1,0 +1,8 @@
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social\bin\Debug\Red_Social.exe
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social\bin\Debug\Red_Social.pdb
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social\obj\Debug\Red_Social.Form1.resources
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social\obj\Debug\Red_Social.Properties.Resources.resources
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social\obj\Debug\Red_Social.csproj.GenerateResource.Cache
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social\obj\Debug\Red_Social.exe
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social\obj\Debug\Red_Social.pdb

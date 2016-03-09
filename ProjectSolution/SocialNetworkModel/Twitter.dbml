@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Twitter" Class="TwitterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=BTMOSS\SQLEXPRESS;Initial Catalog=Twitter;Integrated Security=True" SettingsObjectName="Red_Social_Data.Properties.Settings" SettingsPropertyName="TwitterConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Usuario" Member="Usuarios">
+    <Type Name="Usuario">
+      <Column Name="usuario_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="alias" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="foto_usuario" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_Album" Member="Albums" ThisKey="usuario_id" OtherKey="usuario_id" Type="Album" />
+      <Association Name="Usuario_Amigo" Member="Amigos" ThisKey="usuario_id" OtherKey="usuario_seguido" Type="Amigo" />
+      <Association Name="Usuario_Amigo1" Member="Amigos1" ThisKey="usuario_id" OtherKey="usuario_seguidor" Type="Amigo" />
+      <Association Name="Usuario_Mensaje" Member="Mensajes" ThisKey="usuario_id" OtherKey="usuario_destinatario_id" Type="Mensaje" />
+      <Association Name="Usuario_Mensaje1" Member="Mensajes1" ThisKey="usuario_id" OtherKey="usuario_remitente_id" Type="Mensaje" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Album" Member="Albums">
+    <Type Name="Album">
+      <Column Name="album_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="album_nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Album_Imagen" Member="Imagens" ThisKey="album_id" OtherKey="album_id" Type="Imagen" />
+      <Association Name="Usuario_Album" Member="Usuario" ThisKey="usuario_id" OtherKey="usuario_id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Imagen" Member="Imagens">
+    <Type Name="Imagen">
+      <Column Name="imagen_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="album_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="imagen" Member="imagen1" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Album_Imagen" Member="Album" ThisKey="album_id" OtherKey="album_id" Type="Album" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Amigo" Member="Amigos">
+    <Type Name="Amigo">
+      <Column Name="amigo_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usuario_seguido" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_seguidor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="alias_seguido" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="alias_seguidor" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_Amigo" Member="Usuario" ThisKey="usuario_seguido" OtherKey="usuario_id" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Amigo1" Member="Usuario1" ThisKey="usuario_seguidor" OtherKey="usuario_id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mensaje" Member="Mensajes">
+    <Type Name="Mensaje">
+      <Column Name="mensaje_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usuario_remitente_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="usuario_destinatario_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="alias_remitente" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="alias_destinatario" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_Mensaje" Member="Usuario" ThisKey="usuario_destinatario_id" OtherKey="usuario_id" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Usuario_Mensaje1" Member="Usuario1" ThisKey="usuario_remitente_id" OtherKey="usuario_id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

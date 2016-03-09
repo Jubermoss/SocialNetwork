@@ -1,0 +1,8 @@
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social_Controller\bin\Debug\Red_Social_Controller.dll
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social_Controller\bin\Debug\Red_Social_Controller.pdb
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social_Controller\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social_Controller\obj\Debug\Red_Social_Controller.dll
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social_Controller\obj\Debug\Red_Social_Controller.pdb
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social_Controller\bin\Debug\Red_Social_Data.dll
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social_Controller\bin\Debug\Red_Social_Data.pdb
+C:\Documents and Settings\Manuel\Mis documentos\Visual Studio 2008\Projects\Red_Social\Red_Social_Controller\bin\Debug\Red_Social_Controller.dll.config
